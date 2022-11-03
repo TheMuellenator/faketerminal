@@ -1,7 +1,6 @@
 # FakeTerminal
 
-A fake Javascript terminal for your website - [Demo](http://hellopablo.github.io/faketerminal/)
-
+A fake Javascript terminal for your website - [Demo](http://themuellenator.github.io/faketerminal/)
 
 ## Installation
 
@@ -24,8 +23,6 @@ Instantiate FakeTerminal on an empty `<div>`
         username: 'pablo',
         hostname: 'hellopablo.co.uk'
     });
-
-
 
 ## Options
 
@@ -55,15 +52,13 @@ The following options are available to you:
 
 **Note:** The `username`, `hostname` and `cwd` options can all be functions if you require dynamic behaviour.
 
-
-
 ## Adding Commands
 
 Commands exist within the `window.FakeTerminal` namespace and must extend `window.FakeTerminal.command`. Commands are comprised of 3 main methods: `execute()`, `info()` and `terminate()`.
 
 ### `execute()`
 
-Called when the command is executed. The parent class contains a Deferred object (at `base.deferred`) which should be resolved, or rejected, when the command has finished executing.  
+Called when the command is executed. The parent class contains a Deferred object (at `base.deferred`) which should be resolved, or rejected, when the command has finished executing.
 
 Note that user input will be disabled while a command is running (unless explicitly requested by the command using the `instance.input.request()` method).
 
@@ -76,12 +71,9 @@ This method returns information about the command which is used by things such a
 - `private` - Whether the command should be reported by the `help`
 - `description` - A brief description of the command for use within `help`
 
-
 ### `terminate()`
 
 Called when the command must be terminated early (e.g. when the user pressed ctrl+C). This method will reject the base deferred promise and provides an opportunity for the command to clean up or terminate any processes.
-
-
 
 ### Sample Command
 
@@ -111,8 +103,6 @@ window.FakeTerminal.command.myCommand = function (instance) {
 };
 ```
 
-
-
 ## Requesting user input
 
 At any point in your commands you can request user input in any of the following ways:
@@ -128,7 +118,6 @@ All of the above will return a promise which is resolved when the user hits the 
 In the case of `requestBool()` the promise will be resolved or rejected depending on the user's response, a resolve for a truthy response, rejected for a non-truthy response.
 
 `requestPassword()` behaves identically to `request()` but does not show the type response, nor does it print it to the output.
-
 
 ## Colouring Output
 
@@ -148,22 +137,18 @@ In addition, the following tag will draw a full width horizontal line across the
 <line></line>
 ```
 
-
 ## Events
 
 FakeTerminal fires the following events:
 
 - `ft:init (<instance>)` - fired just as an instance is created
 - `ft:ready (<instance))` - fired once the instance is ready, but before any commands have been executed
-- `ft:command (<instance>, <command>)` - fired after user input be that a command or the response to a request for input 
+- `ft:command (<instance>, <command>)` - fired after user input be that a command or the response to a request for input
 - `ft:destroy (<instance>)` - fired when the instance destroys itself
-
 
 ## How to Contribute
 
 I welcome contributions to FakeTerminal. Fork the repo and submit a pull request. Please ensure that faketerminal.js compiles and that any relevant documentation is updated before sending the pull request. If you want to write some tests then that would be very welcomed!
-
-
 
 ### Compiling CSS and JS
 
@@ -184,8 +169,6 @@ If you simply wish to build (and not watch) then you can use:
     grunt build
 
 All the Less and JS files will be watched for changes, and compiled if necessary.
-
-
 
 ### @todo
 
