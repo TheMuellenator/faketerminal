@@ -16,7 +16,7 @@
   "dependencies": {
     "jquery": ">=1.10.2"
   },
-  "homepage": "https://github.com/themuellenator/faketerminal",
+  "homepage": "https://github.com/TheMuellenator/faketerminal",
   "ignore": [
     "**/.*",
     "node_modules",
