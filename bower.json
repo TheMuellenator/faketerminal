@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "main": "dist/faketerminal.min.js",
   "authors": [
-    "Pablo de la Pena <pablo@hellopablo.co.uk>"
+    "Philipp <hello@example.co.uk>"
   ],
   "description": "A fake Javascript terminal for your website",
   "keywords": [
@@ -16,7 +16,7 @@
   "dependencies": {
     "jquery": ">=1.10.2"
   },
-  "homepage": "https://github.com/hellopablo/faketerminal",
+  "homepage": "https://github.com/themuellenator/faketerminal",
   "ignore": [
     "**/.*",
     "node_modules",
